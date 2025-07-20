@@ -1,0 +1,72 @@
+.header {
+  padding: 24px 0;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  width: var(--container-width);
+}
+
+.logo {
+  margin-right: 131px;
+}
+
+.nav {
+  display: flex;
+  gap: 24px;
+  flex-grow: 1;
+  opacity: 0.7;
+}
+
+.nav a {
+  color: var(--primary-dark-green);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--text-small-size);
+  line-height: var(--line-height-140);
+  letter-spacing: 0;
+}
+
+.label{
+  /* padding: 1px 0 0 1px; */
+}
+
+.cta {
+  border: 1px solid var(--secondary-medium-purple);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--secondary-medium-purple);
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+}
+
+.ctaContent {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+}
+
+.ctaIcon svg {
+  display: block;
+}
+
+.ctaContent span {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--text-small-size);
+  line-height: var(--line-height-120);
+  letter-spacing: 0;
+  text-align: center;
+  vertical-align: middle;
+}
