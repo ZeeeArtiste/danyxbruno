@@ -40,6 +40,11 @@
   /* padding: 1px 0 0 1px; */
 }
 
+.dropdownIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .cta {
   border: 1px solid var(--secondary-medium-purple);
   border-radius: 8px;

@@ -58,7 +58,7 @@ export default function Header() {
             >
               <span className={styles.label}>{item.label}</span>
               {item.hasDropdown && (
-                <span>
+                <span className={styles.dropdownIcon} aria-hidden="true">
                   <ChevronDownIcon />
                 </span>
               )}
