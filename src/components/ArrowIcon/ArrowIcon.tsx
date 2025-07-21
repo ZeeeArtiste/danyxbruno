@@ -7,7 +7,7 @@ export default function ArrowIcon({ size = 13, color = 'currentColor' }: ArrowIc
     return (
         <svg
             width={size}
-            height={(size * 12) / 13}
+            height={size}
             viewBox="0 0 13 12"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

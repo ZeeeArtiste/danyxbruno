@@ -117,4 +117,11 @@ h5 {
   font-size: var(--text-medium-size);
   font-weight: var(--font-weight-medium);
   line-height: var(--line-height-120);
+  transition: color 0.3s ease;
 }
+
+.linkMedium:hover svg {
+  transform: translateX(4px);
+  transition: transform 0.3s ease;
+}
+
