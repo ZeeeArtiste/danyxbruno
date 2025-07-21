@@ -12,6 +12,7 @@ interface TabInfo {
   tags: { text: string; }[];
   description: string;
   image: string;
+  backgroundColor?: string;
 }
 
 const Tabs = () => {
@@ -25,7 +26,8 @@ const Tabs = () => {
         { text: 'MOT CLE ASSOCIE' }
       ],
       description: 'Automatically collect data, launch campaigns, establish quality processes, and build an organization that mirrors your own, all within our platform. Benchmark best practices, set scoring rules, and track performance with custom dashboards.',
-      image: '/t1.png'
+      image: '/t1.png',
+      backgroundColor: '#ffdda5'
     },
     carbone: {
       title: 'Bilan Carbone',
@@ -34,7 +36,8 @@ const Tabs = () => {
         { text: 'TRAJECTOIRE' }
       ],
       description: 'Mesurez et réduisez votre empreinte carbone avec des outils de calcul précis. Définissez des objectifs ambitieux, suivez vos progrès et construisez une stratégie de décarbonation adaptée à votre organisation.',
-      image: '/t1.png'
+      image: '/t1.png',
+      backgroundColor: '#d1e7dd'
     },
     csrd: {
       title: 'CSRD',
@@ -43,7 +46,8 @@ const Tabs = () => {
         { text: 'REPORTING' }
       ],
       description: 'Préparez-vous à la directive CSRD avec nos outils de conformité. Automatisez la collecte de données, générez des rapports conformes et assurez-vous de respecter toutes les exigences réglementaires.',
-      image: '/t1.png'
+      image: '/t1.png',
+      backgroundColor: '#f8d7da'
     },
     analyse: {
       title: "Analyse d'impact et conformité",
@@ -52,7 +56,8 @@ const Tabs = () => {
         { text: 'CONFORMITÉ' }
       ],
       description: "Analysez l'impact de vos activités sur l'environnement et la société. Mesurez votre performance ESG, identifiez les risques et opportunités, et assurez votre conformité réglementaire.",
-      image: '/t1.png'
+      image: '/t1.png',
+      backgroundColor: '#dfe2e6'
     }
   };
 
@@ -110,9 +115,9 @@ const Tabs = () => {
         <div
           className={`
             ${Styles.content}
-            ${Styles['tab-' + activeTab]}
             ${isChanging ? Styles.changing : ''}
           `}
+          style={{ backgroundColor: currentTab.backgroundColor || '#ffdda5' }}
         >
           <div className={Styles.textBlock}>
             <div className={Styles.textBlockHeader}>
