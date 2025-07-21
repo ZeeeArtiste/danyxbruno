@@ -8,15 +8,17 @@ interface LogoProps {
 const Logo: React.FC<LogoProps> = ({ width = 64, height = 65, fill = "#3C4A41", animation=false }) => {
     return (
         <>
-            <style>
-                {`
-                    @keyframes pulseRotate {
-                        0% { transform: scale(1) rotate(0deg); opacity: 1; }
-                        50% { transform: scale(1.2) rotate(180deg); opacity: 0.7; }
-                        100% { transform: scale(1) rotate(360deg); opacity: 1; }
-                    }
-                `}
-            </style>
+            {animation && (
+                <style>
+                    {`
+                        @keyframes pulseRotate {
+                            0% { transform: scale(1) rotate(0deg); opacity: 1; }
+                            50% { transform: scale(1.2) rotate(180deg); opacity: 0.7; }
+                            100% { transform: scale(1) rotate(360deg); opacity: 1; }
+                        }
+                    `}
+                </style>
+            )}
             <svg
                 width={width}
                 height={height}

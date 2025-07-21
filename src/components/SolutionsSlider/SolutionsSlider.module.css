@@ -95,13 +95,13 @@
 .head {
   display: flex;
   align-items: center;
-  gap: 19px;
+  gap: 20px;
   margin-top: 16px;
 }
 
 .content h3 {
   font-size: 32px;
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1.2;
   margin: 0;
 }

@@ -45,6 +45,10 @@ html, body {
   font-size: var(--text-small-size);
 }
 
+main{
+  overflow: hidden;
+}
+
 button {
   border: none;
   background: none;
