@@ -42,7 +42,7 @@ export default function Hero() {
         </h1>
 
         <div className={styles.containerIcon} role="img" aria-label="Sustainability Icon">
-          <Logo />
+          <Logo animation />
         </div>
 
         <div className={styles.containerAction}>

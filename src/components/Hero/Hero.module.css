@@ -20,6 +20,7 @@
   display: flex;
   justify-content: center;
   height: 100%;
+  animation: fadeInUp 1s ease-out forwards;
 }
 
 .videoItem video {
@@ -29,8 +30,13 @@
   object-fit: cover;
 }
 
+.videoItem:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
 .videoItem:nth-child(2) video {
   clip-path: polygon(0 0, 100% 24px, 100% 100%, 0 100%);
+  animation-delay: 0.4s;
 }
 
 .content {
@@ -84,3 +90,16 @@
   width: fit-content;
   height: 50px;
 }
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+

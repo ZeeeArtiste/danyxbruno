@@ -45,26 +45,6 @@
   align-items: center;
   justify-content: center;
 }
-.cta {
-  border: 1px solid var(--secondary-medium-purple);
-  border-radius: 8px;
-  text-decoration: none;
-  color: var(--secondary-medium-purple);
-  display: inline-flex;
-  align-items: center;
-  height: 40px;
-}
-
-.ctaContent {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 0 12px;
-}
-
-.ctaIcon svg {
-  display: block;
-}
 
 .ctaContent span {
   font-family: var(--font-primary);
@@ -74,4 +54,51 @@
   letter-spacing: 0;
   text-align: center;
   vertical-align: middle;
+  display: flex;
+}
+
+.cta {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--secondary-medium-purple);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--secondary-medium-purple);
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+  transition: color 0.3s ease;
+}
+
+.cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background-color: var(--secondary-medium-purple);
+  transition: height 0.4s ease;
+  z-index: 0;
+}
+
+.cta:hover::before {
+  height: 100%;
+}
+
+.ctaContent {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.cta:hover .ctaContent span {
+  color: white;
+}
+
+.cta:hover .ctaIcon svg path {
+  stroke: white;
 }
